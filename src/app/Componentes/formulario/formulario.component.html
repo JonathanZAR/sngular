@@ -1,0 +1,10 @@
+<h1>Calcular el n termino de la serie</h1>
+<div class="card">
+    <div class="card-body">
+        <label>Ingrese el valor de n:</label>
+        <input class="form-control mt-2 required" type="number" [(ngModel)]="valor" #inputValue (click)="reset(inputValue)">
+        <br>
+        <button class="btn btn-primary mt-2" (click)="enviarValor()">Enviar</button>
+        <app-calculo [valor]="valor" *ngIf="openAlert"></app-calculo>
+    </div>
+</div>
